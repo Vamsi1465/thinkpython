@@ -528,6 +528,7 @@ total_minutes = minutes * 60 + 42
 avg_pace = total_minutes / kilometer
 print(avg_pace)
 
+#4
 minutes = 42
 total_seconds = minutes *60 + 42
 avg_pace = 6.2
@@ -539,6 +540,7 @@ avg_pace_seconds = avg_pace_in_seconds % 60
 print(f"Total time in seconds: {total_seconds}")
 print(f"Average pace in minutes and seconds: {int(avg_pace_minutes)} minutes and {int(avg_pace_seconds)} seconds")
 
+#5
 kilometers = 10
 miles = kilometers / 1.61
 minutes = 42
