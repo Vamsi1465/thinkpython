@@ -332,11 +332,44 @@ loop and easy to write with recursion, so it is good to start early.
 Here's a stack diagram that shows the frames created when we called `countdown` with `n = 3`.
 """
 
+from diagram import make_frame, Stack
+
+frames = []
+for n in [3,2,1,0]:
+    d = dict(n=n)
+    frame = make_frame(d, name='countdown', dy=-0.3, loc='left')
+    frames.append(frame)
+
+stack = Stack(frames, dy=-0.5)
+
+from diagram import diagram, adjust
+
+
+width, height, x, y = [1.74, 2.04, 1.05, 1.77]
+ax = diagram(width, height)
+bbox = stack.draw(ax, x, y)
+# adjust(x, y, bbox)
 
 """The four `countdown` frames have different values for the parameter `n`.
 The bottom of the stack, where `n=0`, is called the **base case**.
 It does not make a recursive call, so there are no more frames.
 """
+
+from diagram import make_frame, Stack
+from diagram import diagram, adjust
+
+frames = []
+for n in [2,1,0]:
+    d = dict(string='Hello', n=n)
+    frame = make_frame(d, name='print_n_times', dx=1.3, loc='left')
+    frames.append(frame)
+
+stack = Stack(frames, dy=-0.5)
+
+width, height, x, y = [3.53, 1.54, 1.54, 1.27]
+ax = diagram(width, height)
+bbox = stack.draw(ax, x, y)
+# adjust(x, y, bbox)
 
 """## Infinite recursion
 
@@ -725,7 +758,15 @@ koch(300)
 
 """The result should look like this:"""
 
+make_turtle(delay=0)
+koch(120)
 
+"""Once you have koch working, you can use this loop to draw three Koch curves in the shape of a snowflake."""
+
+make_turtle(delay=0, height=300)
+for i in range(3):
+    koch(120)
+    right(120)
 
 """### Exercise
 
@@ -768,6 +809,10 @@ turtle.pendown()
 sierpinski(200, 3)
 
 """Here's what the result might look like, although the version you get might be different."""
+
+make_turtle(delay=0, height=200)
+
+draw_sierpinski(100, 3)
 
 
 
