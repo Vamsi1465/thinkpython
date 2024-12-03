@@ -504,4 +504,8 @@ Copyright 2024 [Allen B. Downey](https://allendowney.com)
 Code license: [MIT License](https://mit-license.org/)
 
 Text license: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+<<<<<<< HEAD
 """
+=======
+"""
+>>>>>>> 0ffcf9a39d6b2fab189537ce3f5f83bd49c22adc
